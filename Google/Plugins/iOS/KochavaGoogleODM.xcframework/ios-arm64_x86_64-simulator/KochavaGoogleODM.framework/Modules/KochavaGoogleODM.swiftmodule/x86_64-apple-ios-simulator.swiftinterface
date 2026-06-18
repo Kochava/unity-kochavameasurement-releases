@@ -1,0 +1,250 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target x86_64-apple-ios15.5-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name KochavaGoogleODM
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+import Foundation
+import JavaScriptCore
+@_exported import KochavaGoogleODM
+import KochavaNetworking
+import OSLog
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension KochavaGoogleODM.GoogleODM.Conversion {
+  @objc(KVAGoogleODM_Conversion_Result) final public class Result : ObjectiveC.NSObject, KochavaNetworking.DecodableFrom, KochavaNetworking.EncodableTo {
+    #if compiler(>=5.3) && $NonescapableTypes
+    required public init(info: KochavaGoogleODM.GoogleODM.Conversion.Result.Info? = nil, error: (any Swift.Error)? = nil, date: Foundation.Date? = nil)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func from(_ object: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func to(context: KochavaNetworking.Context?) -> Any?
+    #endif
+    public static let type_kochava: KochavaNetworking.Kochava_Type
+    final public let info: KochavaGoogleODM.GoogleODM.Conversion.Result.Info?
+    public typealias Info = Swift.String
+    final public let error: (any Swift.Error)?
+    final public let date: Foundation.Date?
+    @objc deinit
+  }
+}
+@_inheritsConvenienceInitializers @objc(KVAConversionManager) final public class ConversionManager : ObjectiveC.NSObject, KochavaNetworking.Typed {
+  @objc weak public static var shared: Swift.AnyObject?
+  public static let type_kochava: KochavaNetworking.Kochava_Type
+  @objc override dynamic public init()
+  @objc deinit
+}
+public var shared: KochavaNetworking.Product {
+  get
+}
+extension KochavaGoogleODM.GoogleODM {
+  @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(KVAGoogleODM_Conversion) final public class Conversion : ObjectiveC.NSObject, KochavaNetworking.ConfigurableWith, KochavaNetworking.DecodableFrom, KochavaNetworking.DecodableFromWithInitializedObject, KochavaNetworking.EncodableTo, KochavaNetworking.Executor, KochavaNetworking.Invalidatable, KochavaNetworking.Keyable, os.Logger.Provider {
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func from(_ object: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @discardableResult
+    public static func from(_ object: Any?, initializedObject: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func to(context: KochavaNetworking.Context?) -> Any?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func configure(with object: Any?, context: KochavaNetworking.Context?)
+    #endif
+    public static let logger: os.Logger
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func key(context: KochavaNetworking.Context?) -> Swift.AnyHashable?
+    #endif
+    public static let type_kochava: KochavaNetworking.Kochava_Type
+    final public var execution: KochavaNetworking.Execution {
+      get
+    }
+    final public func invalidate()
+    public typealias Closure_RetrieveResult_DidComplete = (_ result: KochavaGoogleODM.GoogleODM.Conversion.Result) -> Swift.Void
+    @objc deinit
+  }
+}
+@_hasMissingDesignatedInitializers @objc(KVAGoogleODM) final public class GoogleODM : ObjectiveC.NSObject, KochavaNetworking.ConfigurableWith, KochavaNetworking.ConfigurableWithWithOptions, KochavaNetworking.DecodableFrom, KochavaNetworking.DecodableFromWithInitializedObject, KochavaNetworking.EncodableTo, KochavaNetworking.Executor, KochavaNetworking.Invalidatable, KochavaNetworking.InvalidatableWithOptions, KochavaNetworking.Keyable, os.Logger.Provider, KochavaNetworking.Networking.RequiredProvider, KochavaNetworking.SharedInstanceProvider, KochavaNetworking.Startable, KochavaNetworking.StartableWithOptions, KochavaNetworking.Stoppable, KochavaNetworking.StoppableWithOptions {
+  @objc public static var shared: KochavaGoogleODM.GoogleODM {
+    @objc get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static var shared_optional: KochavaGoogleODM.GoogleODM? {
+    @objc get
+  }
+  #endif
+  @objc public static var sharedInstance: Any {
+    @objc get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(initWithStorageIdentifier:) convenience public init(storageIdentifier: KochavaNetworking.Networking.StorageIdentifier? = nil)
+  #endif
+  @objc deinit
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func from(_ object: Any?) -> Self?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  public static func from(_ object: Any?, initializedObject: Any?) -> Self?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func to(context: KochavaNetworking.Context?) -> Any?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(configureWith:context:) final public func configure(with object: Any?, context: KochavaNetworking.Context?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public func configure(with object: Any?, context: KochavaNetworking.Context?, logMessagePrintBool: Swift.Bool, asyncBool: Swift.Bool)
+  #endif
+  @objc final public func start()
+  @objc final public func start(logMessagePrintBool: Swift.Bool, asyncBool: Swift.Bool)
+  @objc final public func stop()
+  @objc final public func stop(logMessagePrintBool: Swift.Bool, asyncBool: Swift.Bool)
+  public static let logger: os.Logger
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func key(context: KochavaNetworking.Context?) -> Swift.AnyHashable?
+  #endif
+  @objc override final public var description: Swift.String {
+    @objc get
+  }
+  public static let type_kochava: KochavaNetworking.Kochava_Type
+  final public var execution: KochavaNetworking.Execution {
+    get
+  }
+  @objc final public func invalidate()
+  @objc final public func invalidate(logMessagePrintBool: Swift.Bool, asyncBool: Swift.Bool)
+  final public var conversion: KochavaGoogleODM.GoogleODM.Conversion {
+    get
+  }
+  final public var datapoints: KochavaGoogleODM.GoogleODM.Datapoints {
+    get
+  }
+  final public var firstLaunch: KochavaGoogleODM.GoogleODM.FirstLaunch {
+    get
+  }
+  @objc final public var general: KochavaGoogleODM.GoogleODM.General {
+    @objc get
+  }
+  @objc final public var networking: KochavaNetworking.Networking {
+    @objc get
+  }
+  @objc public static var sharedNetworkingLinkAutomaticallyBool: Swift.Bool {
+    @objc get
+    @objc set(sharedNetworkingLinkAutomaticallyBool)
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static var sharedStorageIdentifier: KochavaNetworking.Networking.StorageIdentifier? {
+    @objc get
+    @objc set(sharedStorageIdentifier)
+  }
+  #endif
+}
+extension KochavaGoogleODM.GoogleODM : JavaScriptCore.JSExport {
+}
+extension KochavaGoogleODM.GoogleODM {
+  @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(KVAGoogleODM_FirstLaunch) final public class FirstLaunch : ObjectiveC.NSObject, KochavaNetworking.ConfigurableWith, KochavaNetworking.DecodableFrom, KochavaNetworking.DecodableFromWithInitializedObject, KochavaNetworking.EncodableTo, KochavaNetworking.Executor, KochavaNetworking.Invalidatable, KochavaNetworking.Keyable, os.Logger.Provider, KochavaNetworking.Startable {
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func from(_ object: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @discardableResult
+    public static func from(_ object: Any?, initializedObject: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func to(context: KochavaNetworking.Context?) -> Any?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func configure(with object: Any?, context: KochavaNetworking.Context?)
+    #endif
+    final public func start()
+    public static let logger: os.Logger
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func key(context: KochavaNetworking.Context?) -> Swift.AnyHashable?
+    #endif
+    public static let type_kochava: KochavaNetworking.Kochava_Type
+    final public var execution: KochavaNetworking.Execution {
+      get
+    }
+    final public func invalidate()
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public var dateInfo: KochavaGoogleODM.GoogleODM.FirstLaunch.DateInfo? {
+      get
+    }
+    #endif
+    public typealias DateInfo = (date: Foundation.Date, source: KochavaGoogleODM.GoogleODM.FirstLaunch.DateSource)
+    public typealias DateSource = Swift.String
+    @objc deinit
+  }
+}
+extension KochavaGoogleODM.GoogleODM {
+  @_hasMissingDesignatedInitializers @objc(KVAGoogleODM_General) final public class General : ObjectiveC.NSObject, KochavaNetworking.ConfigurableWith, KochavaNetworking.DecodableFrom, KochavaNetworking.DecodableFromWithInitializedObject, KochavaNetworking.EncodableTo, KochavaNetworking.Executor, KochavaNetworking.Invalidatable, KochavaNetworking.Keyable, os.Logger.Provider, KochavaNetworking.Startable {
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func from(_ object: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @discardableResult
+    public static func from(_ object: Any?, initializedObject: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func to(context: KochavaNetworking.Context?) -> Any?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func configure(with object: Any?, context: KochavaNetworking.Context?)
+    #endif
+    final public func start()
+    public static let logger: os.Logger
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func key(context: KochavaNetworking.Context?) -> Swift.AnyHashable?
+    #endif
+    public static let type_kochava: KochavaNetworking.Kochava_Type
+    final public var execution: KochavaNetworking.Execution {
+      get
+    }
+    final public func invalidate()
+    final public var storageIdentifierAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    @objc deinit
+  }
+}
+extension KochavaGoogleODM.GoogleODM {
+  @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(KVAGoogleODM_Datapoints) final public class Datapoints : ObjectiveC.NSObject, KochavaNetworking.ConfigurableWith, KochavaNetworking.DecodableFrom, KochavaNetworking.DecodableFromWithInitializedObject, KochavaNetworking.EncodableTo, KochavaNetworking.Executor, KochavaNetworking.Invalidatable, KochavaNetworking.Keyable, os.Logger.Provider {
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func from(_ object: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @discardableResult
+    public static func from(_ object: Any?, initializedObject: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func to(context: KochavaNetworking.Context?) -> Any?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func configure(with object: Any?, context: KochavaNetworking.Context?)
+    #endif
+    public static let logger: os.Logger
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func key(context: KochavaNetworking.Context?) -> Swift.AnyHashable?
+    #endif
+    public static let type_kochava: KochavaNetworking.Kochava_Type
+    final public var execution: KochavaNetworking.Execution {
+      get
+    }
+    final public func invalidate()
+    @objc deinit
+  }
+}
+@_inheritsConvenienceInitializers @objc(KochavaGoogleODM_Product) final public class Product : ObjectiveC.NSObject, os.Logger.Provider, KochavaNetworking.SharedInstanceProvider {
+  @objc public static var shared: KochavaNetworking.Product {
+    @objc get
+  }
+  public static var sharedInstance: Any {
+    get
+  }
+  public static let logger: os.Logger
+  @objc override dynamic public init()
+  @objc deinit
+}

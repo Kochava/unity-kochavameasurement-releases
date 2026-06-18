@@ -1,0 +1,11 @@
+framework module KochavaMeasurement {
+  umbrella header "KochavaMeasurement.h"
+  export *
+
+  module * { export * }
+}
+
+module KochavaMeasurement.Swift {
+  header "KochavaMeasurement-Swift.h"
+  requires objc
+}

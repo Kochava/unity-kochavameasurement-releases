@@ -1,0 +1,1449 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2.1 effective-5.10 (swiftlang-6.2.1.4.8 clang-1700.4.4.1)
+// swift-module-flags: -target arm64-apple-ios15.5 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name KochavaMeasurement
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.1
+import AVFoundation
+import AdAttributionKit
+import AdServices
+import AdSupport
+import AppTrackingTransparency
+import CoreTelephony
+import DeviceCheck
+import Foundation
+import JavaScriptCore
+@_exported import KochavaMeasurement
+import KochavaNetworking
+import OSLog
+import StoreKit
+import Swift
+import SystemConfiguration
+import UIKit
+import UserNotifications
+import WebKit
+import _AdAttributionKit_StoreKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_hasMissingDesignatedInitializers @objc(KVAIdentityLink) final public class IdentityLink : ObjectiveC.NSObject, KochavaNetworking.DecodableFrom, KochavaNetworking.EncodableTo, KochavaNetworking.Executable, os.Logger.Provider, KochavaNetworking.Networking.Provider, KochavaNetworking.Registerable {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(registerWithName:identifier:) public static func register(name: KochavaMeasurement.IdentityLink.Name, identifier: KochavaMeasurement.IdentityLink.Identifier?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(registerWithName:identifier:registrarArray:) public static func register(name: KochavaMeasurement.IdentityLink.Name, identifier: KochavaMeasurement.IdentityLink.Identifier?, registrarArray: [any KochavaMeasurement.IdentityLink.RegistrarProvider]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func from(_ object: Any?) -> Self?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func to(context: KochavaNetworking.Context?) -> Any?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  final public func register() -> KochavaNetworking.Collection.RegisterResult?
+  #endif
+  final public func execute()
+  public static let logger: os.Logger
+  public static let type_kochava: KochavaNetworking.Kochava_Type
+  final public var execution: KochavaNetworking.Execution {
+    get
+  }
+  public static func == (lhs: KochavaMeasurement.IdentityLink, rhs: KochavaMeasurement.IdentityLink) -> Swift.Bool
+  public static func != (lhs: KochavaMeasurement.IdentityLink, rhs: KochavaMeasurement.IdentityLink) -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  #endif
+  @objc final public let name: KochavaMeasurement.IdentityLink.Name
+  public typealias Name = Swift.String
+  @objc final public let identifier: KochavaMeasurement.IdentityLink.Identifier?
+  public typealias Identifier = Swift.String
+  @objc final public var networking: KochavaNetworking.Networking?
+  @objc(KVAIdentityLink_Registrar) public protocol Registrar {
+    @objc(register:) func register(_ identityLink: KochavaMeasurement.IdentityLink)
+  }
+  @objc(KVAIdentityLink_RegistrarProvider) public protocol RegistrarProvider {
+    @objc var identityLink_registrar: any KochavaMeasurement.IdentityLink.Registrar { get }
+  }
+  @objc deinit
+}
+extension KochavaMeasurement.Measurement {
+  @_inheritsConvenienceInitializers @objc(KVAMeasurement_Install) final public class Install : ObjectiveC.NSObject, KochavaNetworking.ConfigurableWith, KochavaNetworking.DecodableFrom, KochavaNetworking.DecodableFromWithInitializedObject, KochavaNetworking.EncodableTo, KochavaNetworking.Executor, KochavaNetworking.Invalidatable, KochavaNetworking.Keyable, os.Logger.Provider, KochavaNetworking.Startable {
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func from(_ object: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @discardableResult
+    public static func from(_ object: Any?, initializedObject: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func to(context: KochavaNetworking.Context?) -> Any?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func configure(with object: Any?, context: KochavaNetworking.Context?)
+    #endif
+    final public func start()
+    public static let logger: os.Logger
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func key(context: KochavaNetworking.Context?) -> Swift.AnyHashable?
+    #endif
+    public static let type_kochava: KochavaNetworking.Kochava_Type
+    final public var execution: KochavaNetworking.Execution {
+      get
+    }
+    final public func invalidate()
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc final public var didStartFirstDate: Foundation.Date? {
+      @objc get
+    }
+    #endif
+    @objc override dynamic public init()
+    @objc deinit
+  }
+}
+extension KochavaMeasurement.Measurement.Attribution {
+  @_hasMissingDesignatedInitializers @objc(KVAMeasurement_Attribution_Result) final public class Result : ObjectiveC.NSObject, KochavaNetworking.DecodableFrom, KochavaNetworking.EncodableTo, os.Logger.Provider {
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func from(_ object: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc(kva_toContext:) final public func to(context: KochavaNetworking.Context?) -> Any?
+    #endif
+    public static let logger: os.Logger
+    public static let type_kochava: KochavaNetworking.Kochava_Type
+    final public var execution: KochavaNetworking.Execution {
+      get
+    }
+    @objc final public var attributedBool: Swift.Bool {
+      @objc get
+    }
+    @objc final public var firstInstallBool: Swift.Bool {
+      @objc get
+    }
+    @objc final public let rawDictionary: [Swift.AnyHashable : Any]?
+    @objc final public var retrievedBool: Swift.Bool {
+      @objc get
+    }
+    @objc deinit
+  }
+}
+extension KochavaMeasurement.Deeplink {
+  @_hasMissingDesignatedInitializers @objc(KVADeeplink_Wrapper) final public class Wrapper : ObjectiveC.NSObject, KochavaNetworking.DecodableFrom, KochavaNetworking.EncodableTo, KochavaNetworking.Executable, os.Logger.Provider, KochavaNetworking.Networking.Provider, KochavaNetworking.Registerable {
+    @objc(registerWithDomain:) public static func register(domain: KochavaMeasurement.Deeplink.Wrapper.Domain)
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func register(domain: KochavaMeasurement.Deeplink.Wrapper.Domain, unwrapBool: Swift.Bool?)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc(registerWithDomain:registrarArray:) public static func register(domain: KochavaMeasurement.Deeplink.Wrapper.Domain, registrarArray: [any KochavaMeasurement.Deeplink.Wrapper.RegistrarProvider]?)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func register(domain: KochavaMeasurement.Deeplink.Wrapper.Domain, unwrapBool: Swift.Bool?, registrarArray: [any KochavaMeasurement.Deeplink.Wrapper.RegistrarProvider]?)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func from(_ object: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func to(context: KochavaNetworking.Context?) -> Any?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @discardableResult
+    final public func register() -> KochavaNetworking.Collection.RegisterResult?
+    #endif
+    final public func execute()
+    public static let logger: os.Logger
+    public static let type_kochava: KochavaNetworking.Kochava_Type
+    final public var execution: KochavaNetworking.Execution {
+      get
+    }
+    @objc final public let domain: KochavaMeasurement.Deeplink.Wrapper.Domain
+    public typealias Domain = Swift.String
+    @objc final public var networking: KochavaNetworking.Networking?
+    @objc(KVADeeplink_Wrapper_Registrar) public protocol Registrar {
+      @objc(register:) func register(_ wrapper: KochavaMeasurement.Deeplink.Wrapper)
+    }
+    @objc(KVADeeplink_Wrapper_RegistrarProvider) public protocol RegistrarProvider {
+      @objc var deeplink_wrapper_registrar: any KochavaMeasurement.Deeplink.Wrapper.Registrar { get }
+    }
+    @objc deinit
+  }
+}
+@_hasMissingDesignatedInitializers @objc(KVAMeasurement) final public class Measurement : ObjectiveC.NSObject, KochavaNetworking.ConfigurableWith, KochavaNetworking.ConfigurableWithWithOptions, KochavaMeasurement.CustomIdentifier.RegistrarProvider, KochavaMeasurement.CustomValue.RegistrarProvider, KochavaNetworking.DecodableFrom, KochavaNetworking.DecodableFromWithInitializedObject, KochavaMeasurement.Deeplink_DeferredPrefetch_AugmenterProvider, KochavaMeasurement.Deeplink.ProcessorProvider, KochavaMeasurement.Deeplink.Wrapper.RegistrarProvider, KochavaNetworking.EncodableTo, KochavaMeasurement.Event.DefaultParameter.RegistrarProvider, KochavaMeasurement.Event.SenderProvider, KochavaNetworking.Executor, KochavaMeasurement.IdentityLink.RegistrarProvider, KochavaNetworking.Invalidatable, KochavaNetworking.InvalidatableWithOptions, os.Logger.Provider, KochavaNetworking.Networking.RequiredProvider, KochavaNetworking.PrivacyProfile.RegistrarProvider, KochavaNetworking.SharedInstanceProvider, KochavaNetworking.Startable, KochavaNetworking.StartableWithOptions, KochavaNetworking.Stoppable, KochavaNetworking.StoppableWithOptions {
+  @objc public static var shared: KochavaMeasurement.Measurement {
+    @objc get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static var shared_optional: KochavaMeasurement.Measurement? {
+    @objc get
+  }
+  #endif
+  @objc public static var sharedInstance: Any {
+    @objc get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(initWithStorageIdentifier:) convenience public init(storageIdentifier: KochavaNetworking.Networking.StorageIdentifier? = nil)
+  #endif
+  @objc deinit
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func from(_ object: Any?) -> Self?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  public static func from(_ object: Any?, initializedObject: Any?) -> Self?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func to(context: KochavaNetworking.Context?) -> Any?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(configureWith:context:) final public func configure(with object: Any?, context: KochavaNetworking.Context?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func configure(with object: Any?, context: KochavaNetworking.Context?, logMessagePrintBool: Swift.Bool, asyncBool: Swift.Bool)
+  #endif
+  @objc(startWithAppGUIDString:) final public func start(appGUIDString: Swift.String)
+  @objc(startWithPartnerNameString:) final public func start(partnerNameString: Swift.String)
+  @objc final public func start()
+  @objc final public func start(logMessagePrintBool: Swift.Bool, asyncBool: Swift.Bool)
+  @objc final public func stop()
+  @objc final public func stop(logMessagePrintBool: Swift.Bool, asyncBool: Swift.Bool)
+  public static let logger: os.Logger
+  @objc override final public var description: Swift.String {
+    @objc get
+  }
+  public static let type_kochava: KochavaNetworking.Kochava_Type
+  final public var execution: KochavaNetworking.Execution {
+    get
+  }
+  @objc final public func invalidate()
+  @objc final public func invalidate(logMessagePrintBool: Swift.Bool, asyncBool: Swift.Bool)
+  @objc final public var adAttribution: KochavaMeasurement.Measurement.AdAttribution {
+    @objc get
+  }
+  @objc final public var appLimitAdTracking: KochavaMeasurement.Measurement.AppLimitAdTracking {
+    @objc get
+  }
+  @objc final public var appTrackingTransparency: KochavaMeasurement.Measurement_AppTrackingTransparency {
+    @objc get
+  }
+  @objc final public var attribution: KochavaMeasurement.Measurement.Attribution {
+    @objc get
+  }
+  @objc final public var customIdentifiers: KochavaMeasurement.Measurement.CustomIdentifiers {
+    @objc get
+  }
+  @objc final public var customValues: KochavaMeasurement.Measurement.CustomValues {
+    @objc get
+  }
+  final public var datapoints: KochavaMeasurement.Measurement.Datapoints {
+    get
+  }
+  @objc final public var deeplinks: KochavaMeasurement.Measurement.Deeplinks {
+    @objc get
+  }
+  final public var events: KochavaMeasurement.Measurement.Events {
+    get
+  }
+  @objc final public var general: KochavaMeasurement.Measurement.General {
+    @objc get
+  }
+  @objc final public var identityLinking: KochavaMeasurement.Measurement.IdentityLinking {
+    @objc get
+  }
+  @objc final public var install: KochavaMeasurement.Measurement.Install {
+    @objc get
+  }
+  @objc final public var installIdentifier: KochavaMeasurement.Measurement.InstallIdentifier {
+    @objc get
+  }
+  @objc final public var networking: KochavaNetworking.Networking {
+    @objc get
+  }
+  @objc final public var config: KochavaNetworking.Networking.Config {
+    @objc get
+  }
+  @objc final public var privacy: KochavaNetworking.Networking.Privacy {
+    @objc get
+  }
+  @objc final public var sleepBool: Swift.Bool {
+    @objc get
+    @objc set(sleepBool)
+  }
+  @objc final public var startedBool: Swift.Bool {
+    @objc get
+  }
+  @objc final public var customIdentifier_registrar: any KochavaMeasurement.CustomIdentifier.Registrar {
+    @objc get
+  }
+  @objc final public var customValue_registrar: any KochavaMeasurement.CustomValue.Registrar {
+    @objc get
+  }
+  @objc final public var deeplinks_deferredPrefetch_augmenter: any KochavaMeasurement.Deeplink_DeferredPrefetch_Augmenter {
+    @objc get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public var deeplink_processor: (any KochavaMeasurement.Deeplink.Processor)? {
+    @objc get
+  }
+  #endif
+  @objc final public var deeplink_wrapper_registrar: any KochavaMeasurement.Deeplink.Wrapper.Registrar {
+    @objc get
+  }
+  @objc final public var event_defaultParameter_registrar: any KochavaMeasurement.Event.DefaultParameter.Registrar {
+    @objc get
+  }
+  @objc final public var event_sender: any KochavaMeasurement.Event.Sender {
+    @objc get
+  }
+  @objc final public var identityLink_registrar: any KochavaMeasurement.IdentityLink.Registrar {
+    @objc get
+  }
+  @objc final public var privacyProfile_registrar: any KochavaNetworking.PrivacyProfile.Registrar {
+    @objc get
+  }
+  @objc public static var sharedNetworkingLinkAutomaticallyBool: Swift.Bool {
+    @objc get
+    @objc set(sharedNetworkingLinkAutomaticallyBool)
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static var sharedStorageIdentifier: KochavaNetworking.Networking.StorageIdentifier? {
+    @objc get
+    @objc set(sharedStorageIdentifier)
+  }
+  #endif
+}
+extension KochavaMeasurement.Measurement : JavaScriptCore.JSExport {
+}
+extension KochavaMeasurement.Measurement {
+  @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(KVAMeasurement_IdentityLinking) final public class IdentityLinking : ObjectiveC.NSObject, KochavaNetworking.ConfigurableWith, KochavaNetworking.DecodableFrom, KochavaNetworking.DecodableFromWithInitializedObject, KochavaNetworking.EncodableTo, KochavaNetworking.Executor, KochavaMeasurement.IdentityLink.Registrar, KochavaMeasurement.IdentityLink.RegistrarProvider, KochavaNetworking.Invalidatable, KochavaNetworking.Keyable, os.Logger.Provider {
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func from(_ object: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @discardableResult
+    public static func from(_ object: Any?, initializedObject: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func to(context: KochavaNetworking.Context?) -> Any?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func configure(with object: Any?, context: KochavaNetworking.Context?)
+    #endif
+    @objc final public func register(_ identityLink: KochavaMeasurement.IdentityLink)
+    @objc final public var identityLink_registrar: any KochavaMeasurement.IdentityLink.Registrar {
+      @objc get
+    }
+    public static let logger: os.Logger
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func key(context: KochavaNetworking.Context?) -> Swift.AnyHashable?
+    #endif
+    public static let type_kochava: KochavaNetworking.Kochava_Type
+    final public var execution: KochavaNetworking.Execution {
+      get
+    }
+    final public func invalidate()
+    @objc deinit
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(KVAMeasurement_AppTrackingTransparency) final public class Measurement_AppTrackingTransparency : ObjectiveC.NSObject, Foundation.NSCopying, KochavaNetworking.ConfigurableWith, KochavaNetworking.DecodableFrom, KochavaNetworking.DecodableFromWithInitializedObject, KochavaNetworking.EncodableTo, KochavaNetworking.Executor, KochavaNetworking.Invalidatable, KochavaNetworking.Keyable, os.Logger.Provider, KochavaNetworking.Networking.Provider, KochavaNetworking.Startable {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func from(_ object: Any?) -> Self?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  public static func from(_ object: Any?, initializedObject: Any?) -> Self?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func to(context: KochavaNetworking.Context?) -> Any?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func configure(with object: Any?, context: KochavaNetworking.Context?)
+  #endif
+  final public func start()
+  public static let logger: os.Logger
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func key(context: KochavaNetworking.Context?) -> Swift.AnyHashable?
+  #endif
+  public static let type_kochava: KochavaNetworking.Kochava_Type
+  final public var execution: KochavaNetworking.Execution {
+    get
+  }
+  final public func invalidate()
+  final public func customPromptDidComplete()
+  @objc(authorizationDidCompleteWithStatus:) final public func authorizationDidComplete(status: AppTrackingTransparency.ATTrackingManager.AuthorizationStatus)
+  final public var customPromptBoolSetTask: KochavaNetworking.Task {
+    get
+    set
+  }
+  final public var customPromptDidCompleteTask: KochavaNetworking.Task {
+    get
+    set
+  }
+  final public var enableTask: KochavaNetworking.Task {
+    get
+    set
+  }
+  final public var setAuthorizationStatusWaitTask: KochavaNetworking.Task {
+    get
+    set
+  }
+  final public var setAutoRequestAuthorizationBoolTask: KochavaNetworking.Task {
+    get
+    set
+  }
+  @objc final public var networking: KochavaNetworking.Networking? {
+    @objc get
+    @objc set
+  }
+  @objc final public var autoRequestTrackingAuthorizationBool: Swift.Bool {
+    @objc get
+    @objc set(autoRequestTrackingAuthorizationBool)
+  }
+  @objc final public var authorizationStatusWaitTimeInterval: Foundation.TimeInterval {
+    @objc get
+    @objc set(authorizationStatusWaitTimeInterval)
+  }
+  @objc final public var customPromptBool: Swift.Bool {
+    @objc get
+    @objc set(customPromptBool)
+  }
+  @objc final public var enabledBool: Swift.Bool {
+    @objc get
+    @objc set(enabledBool)
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public var authorizationStatusString: Swift.String? {
+    @objc get
+  }
+  #endif
+  @objc deinit
+}
+extension KochavaMeasurement.Measurement {
+  @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(KVAMeasurement_CustomIdentifiers) final public class CustomIdentifiers : ObjectiveC.NSObject, Foundation.NSCopying, KochavaNetworking.ConfigurableWith, KochavaMeasurement.CustomIdentifier.Registrar, KochavaMeasurement.CustomIdentifier.RegistrarProvider, KochavaNetworking.DecodableFrom, KochavaNetworking.DecodableFromWithInitializedObject, KochavaNetworking.EncodableTo, KochavaNetworking.Executor, KochavaNetworking.Invalidatable, KochavaNetworking.Keyable, os.Logger.Provider, KochavaNetworking.Networking.Provider {
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc final public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func from(_ object: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @discardableResult
+    public static func from(_ object: Any?, initializedObject: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func to(context: KochavaNetworking.Context?) -> Any?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func configure(with object: Any?, context: KochavaNetworking.Context?)
+    #endif
+    @objc final public func register(_ customIdentifier: KochavaMeasurement.CustomIdentifier)
+    @objc final public var customIdentifier_registrar: any KochavaMeasurement.CustomIdentifier.Registrar {
+      @objc get
+    }
+    public static let logger: os.Logger
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func key(context: KochavaNetworking.Context?) -> Swift.AnyHashable?
+    #endif
+    public static let type_kochava: KochavaNetworking.Kochava_Type
+    final public var execution: KochavaNetworking.Execution {
+      get
+    }
+    final public func invalidate()
+    @objc final public var networking: KochavaNetworking.Networking? {
+      @objc get
+      @objc set
+    }
+    @objc deinit
+  }
+}
+@_inheritsConvenienceInitializers @objc(KochavaMeasurement_Product) final public class Product : ObjectiveC.NSObject, os.Logger.Provider, KochavaNetworking.SharedInstanceProvider {
+  @objc public static var shared: KochavaNetworking.Product {
+    @objc get
+  }
+  public static var sharedInstance: Any {
+    get
+  }
+  public static let logger: os.Logger
+  public static var shutdownTask: KochavaNetworking.Task
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(KVAEvent_Type) final public class Event_Type : ObjectiveC.NSObject, KochavaNetworking.DecodableFrom, KochavaNetworking.EncodableTo, os.Logger.Provider {
+  @objc public static let achievement: KochavaMeasurement.Event_Type
+  @objc public static let adClick: KochavaMeasurement.Event_Type
+  @objc public static let addToCart: KochavaMeasurement.Event_Type
+  @objc public static let addToWishList: KochavaMeasurement.Event_Type
+  @objc public static let adView: KochavaMeasurement.Event_Type
+  @objc public static let checkoutStart: KochavaMeasurement.Event_Type
+  @objc public static let consentGranted: KochavaMeasurement.Event_Type
+  @objc public static let custom: KochavaMeasurement.Event_Type
+  @objc public static let deeplink: KochavaMeasurement.Event_Type
+  @objc public static let levelComplete: KochavaMeasurement.Event_Type
+  @objc public static let purchase: KochavaMeasurement.Event_Type
+  @objc public static let pushOpened: KochavaMeasurement.Event_Type
+  @objc public static let pushReceived: KochavaMeasurement.Event_Type
+  @objc public static let rating: KochavaMeasurement.Event_Type
+  @objc public static let registrationComplete: KochavaMeasurement.Event_Type
+  @objc public static let search: KochavaMeasurement.Event_Type
+  @objc public static let startTrial: KochavaMeasurement.Event_Type
+  @objc public static let subscribe: KochavaMeasurement.Event_Type
+  @objc public static let tutorialComplete: KochavaMeasurement.Event_Type
+  @objc public static let view: KochavaMeasurement.Event_Type
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func from(_ object: Any?) -> Self?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func to(context: KochavaNetworking.Context?) -> Any?
+  #endif
+  public static let logger: os.Logger
+  @objc override final public var description: Swift.String {
+    @objc get
+  }
+  public static let type_kochava: KochavaNetworking.Kochava_Type
+  @objc final public let name: KochavaMeasurement.Event.EventName
+  @objc deinit
+}
+extension KochavaMeasurement.Measurement {
+  @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(KVAMeasurement_InstallIdentifier) final public class InstallIdentifier : ObjectiveC.NSObject, KochavaNetworking.ConfigurableWith, KochavaNetworking.DecodableFrom, KochavaNetworking.DecodableFromWithInitializedObject, KochavaNetworking.EncodableTo, KochavaNetworking.Executor, KochavaNetworking.Invalidatable, KochavaNetworking.Keyable, os.Logger.Provider, KochavaNetworking.Startable {
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func from(_ object: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @discardableResult
+    public static func from(_ object: Any?, initializedObject: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func to(context: KochavaNetworking.Context?) -> Any?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func configure(with object: Any?, context: KochavaNetworking.Context?)
+    #endif
+    final public func start()
+    @objc(retrieveWithClosure_didComplete:) final public func retrieve(closure_didComplete: @escaping KochavaMeasurement.Measurement.InstallIdentifier.Closure_Retrieve_DidComplete)
+    public typealias Closure_Retrieve_DidComplete = (_ installIdentifier: KochavaMeasurement.Measurement.InstallIdentifier.Identifier?) -> Swift.Void
+    public static let logger: os.Logger
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func key(context: KochavaNetworking.Context?) -> Swift.AnyHashable?
+    #endif
+    public static let type_kochava: KochavaNetworking.Kochava_Type
+    final public var execution: KochavaNetworking.Execution {
+      get
+    }
+    final public func invalidate()
+    public typealias Identifier = Swift.String
+    @objc deinit
+  }
+}
+extension KochavaMeasurement.Measurement.AdAttribution.Conversion {
+  @_inheritsConvenienceInitializers @objc(KVAMeasurement_AdAttribution_Conversion_Result) final public class Result : ObjectiveC.NSObject, Foundation.NSCopying, KochavaNetworking.ConfigurableWith, KochavaNetworking.DecodableFrom, KochavaNetworking.EncodableTo, KochavaNetworking.Executor, os.Logger.Provider {
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc final public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc(kva_from:) public static func from(_ object: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc(kva_toContext:) final public func to(context: KochavaNetworking.Context?) -> Any?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func configure(with object: Any?, context: KochavaNetworking.Context?)
+    #endif
+    public static let logger: os.Logger
+    public static let type_kochava: KochavaNetworking.Kochava_Type
+    final public var execution: KochavaNetworking.Execution {
+      get
+    }
+    final public func invalidate()
+    @objc final public func valueInt() -> Swift.Int
+    #if compiler(>=5.3) && $NonescapableTypes
+    @available(iOS 17.4, iOSApplicationExtension 17.4, *)
+    final public var aakCoarseValue: AdAttributionKit.CoarseConversionValue? {
+      get
+    }
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc final public var aakError: (any Swift.Error)? {
+      @objc get
+    }
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc final public var skanError: (any Swift.Error)? {
+      @objc get
+    }
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc final public var modelString: Swift.String? {
+      @objc get
+    }
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc final public var rawValueNumber: Foundation.NSNumber? {
+      @objc get
+    }
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @available(iOS 16.1, iOSApplicationExtension 16.1, *)
+    @objc final public var skanCoarseValue: StoreKit.SKAdNetwork.CoarseConversionValue? {
+      @objc get
+    }
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public var translatedValueInt: KochavaMeasurement.Measurement.AdAttribution.Conversion.Result.TranslatedValueInt? {
+      get
+    }
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc final public var translatedValueIntNumber: Foundation.NSNumber? {
+      @objc get
+    }
+    #endif
+    public typealias TranslatedValueInt = Swift.Int
+    @_inheritsConvenienceInitializers @objc(KVAMeasurement_AdAttribution_Conversion_Result_API) public class API : ObjectiveC.NSObject {
+      public static let aak: KochavaMeasurement.Measurement.AdAttribution.Conversion.Result.API
+      public static let skan: KochavaMeasurement.Measurement.AdAttribution.Conversion.Result.API
+      @objc override dynamic public init()
+      @objc deinit
+    }
+    @objc override dynamic public init()
+    @objc deinit
+  }
+}
+public var shared: KochavaNetworking.Product {
+  get
+}
+extension KochavaMeasurement.Measurement {
+  @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(KVAMeasurement_Deeplinks) final public class Deeplinks : ObjectiveC.NSObject, Foundation.NSCopying, KochavaNetworking.ConfigurableWith, KochavaNetworking.DecodableFrom, KochavaNetworking.DecodableFromWithInitializedObject, KochavaMeasurement.Deeplink.Processor, KochavaMeasurement.Deeplink.ProcessorProvider, KochavaMeasurement.Deeplink_DeferredPrefetch_Augmenter, KochavaMeasurement.Deeplink_DeferredPrefetch_AugmenterProvider, KochavaMeasurement.Deeplink.Wrapper.Registrar, KochavaMeasurement.Deeplink.Wrapper.RegistrarProvider, KochavaNetworking.EncodableTo, KochavaNetworking.Executor, KochavaNetworking.Invalidatable, KochavaNetworking.Keyable, os.Logger.Provider, KochavaNetworking.Networking.Provider {
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc final public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func from(_ object: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @discardableResult
+    public static func from(_ object: Any?, initializedObject: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func to(context: KochavaNetworking.Context?) -> Any?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func configure(with object: Any?, context: KochavaNetworking.Context?)
+    #endif
+    final public func invalidate()
+    public static let logger: os.Logger
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func key(context: KochavaNetworking.Context?) -> Swift.AnyHashable?
+    #endif
+    public static let type_kochava: KochavaNetworking.Kochava_Type
+    final public var execution: KochavaNetworking.Execution {
+      get
+    }
+    @objc(register:) final public func register(_ wrapper: KochavaMeasurement.Deeplink.Wrapper)
+    @objc final public var deeplink_wrapper_registrar: any KochavaMeasurement.Deeplink.Wrapper.Registrar {
+      @objc get
+    }
+    @objc final public func augment(_ deferredPrefetch: KochavaMeasurement.Deeplink.DeferredPrefetch)
+    @objc final public var deeplinks_deferredPrefetch_augmenter: any KochavaMeasurement.Deeplink_DeferredPrefetch_Augmenter {
+      @objc get
+    }
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc(processDeeplink:closure_didComplete:) final public func process(deeplink: KochavaMeasurement.Deeplink, closure_didComplete: KochavaMeasurement.Deeplink.Closure_Process_DidComplete?)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc final public var deeplink_processor: (any KochavaMeasurement.Deeplink.Processor)? {
+      @objc get
+    }
+    #endif
+    @objc final public var networking: KochavaNetworking.Networking? {
+      @objc get
+      @objc set
+    }
+    @objc deinit
+  }
+}
+extension KochavaMeasurement.Measurement {
+  @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(KVAMeasurement_AppLimitAdTracking) final public class AppLimitAdTracking : ObjectiveC.NSObject, KochavaNetworking.ConfigurableWith, KochavaNetworking.DecodableFrom, KochavaNetworking.DecodableFromWithInitializedObject, KochavaNetworking.EncodableTo, KochavaNetworking.Executor, KochavaNetworking.Keyable, os.Logger.Provider {
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func from(_ object: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @discardableResult
+    public static func from(_ object: Any?, initializedObject: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func to(context: KochavaNetworking.Context?) -> Any?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func configure(with object: Any?, context: KochavaNetworking.Context?)
+    #endif
+    public static let logger: os.Logger
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func key(context: KochavaNetworking.Context?) -> Swift.AnyHashable?
+    #endif
+    public static let type_kochava: KochavaNetworking.Kochava_Type
+    final public var execution: KochavaNetworking.Execution {
+      get
+    }
+    final public var boolSetTask: KochavaNetworking.Task {
+      get
+      set
+    }
+    @objc(boolean) final public var bool_resolved: Swift.Bool {
+      @objc get
+      @objc set(bool)
+    }
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public var bool: Swift.Bool? {
+      get
+      set(bool)
+    }
+    #endif
+    @objc deinit
+  }
+}
+@_hasMissingDesignatedInitializers @objc(KVACustomIdentifier) final public class CustomIdentifier : ObjectiveC.NSObject, KochavaNetworking.DecodableFrom, KochavaNetworking.EncodableTo, KochavaNetworking.Executable, os.Logger.Provider, KochavaNetworking.Networking.Provider, KochavaNetworking.Registerable {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(registerWithName:identifier:) public static func register(name: KochavaMeasurement.CustomIdentifier.Name, identifier: KochavaMeasurement.CustomIdentifier.Identifier?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(registerWithName:identifier:registrarArray:) public static func register(name: KochavaMeasurement.CustomIdentifier.Name, identifier: KochavaMeasurement.CustomIdentifier.Identifier?, registrarArray: [any KochavaMeasurement.CustomIdentifier.RegistrarProvider]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func from(_ object: Any?) -> Self?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func to(context: KochavaNetworking.Context?) -> Any?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  final public func register() -> KochavaNetworking.Collection.RegisterResult?
+  #endif
+  final public func execute()
+  public static let logger: os.Logger
+  public static let type_kochava: KochavaNetworking.Kochava_Type
+  final public var execution: KochavaNetworking.Execution {
+    get
+  }
+  @objc final public let name: KochavaMeasurement.CustomIdentifier.Name
+  public typealias Name = Swift.String
+  @objc final public let identifier: KochavaMeasurement.CustomIdentifier.Identifier?
+  public typealias Identifier = Swift.String
+  @objc final public var networking: KochavaNetworking.Networking?
+  @objc(KVACustomIdentifier_Registrar) public protocol Registrar {
+    @objc(register:) func register(_ customIdentifier: KochavaMeasurement.CustomIdentifier)
+  }
+  @objc(KVACustomIdentifier_RegistrarProvider) public protocol RegistrarProvider {
+    @objc var customIdentifier_registrar: any KochavaMeasurement.CustomIdentifier.Registrar { get }
+  }
+  @objc deinit
+}
+extension KochavaMeasurement.Measurement {
+  @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(KVAMeasurement_AdAttribution) final public class AdAttribution : ObjectiveC.NSObject, KochavaNetworking.ConfigurableWith, KochavaNetworking.DecodableFrom, KochavaNetworking.DecodableFromWithInitializedObject, KochavaNetworking.EncodableTo, KochavaNetworking.Executor, KochavaNetworking.Invalidatable, KochavaNetworking.Keyable, os.Logger.Provider, KochavaNetworking.Startable {
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func from(_ object: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @discardableResult
+    public static func from(_ object: Any?, initializedObject: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func to(context: KochavaNetworking.Context?) -> Any?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func configure(with object: Any?, context: KochavaNetworking.Context?)
+    #endif
+    final public func start()
+    public static let logger: os.Logger
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func key(context: KochavaNetworking.Context?) -> Swift.AnyHashable?
+    #endif
+    public static let type_kochava: KochavaNetworking.Kochava_Type
+    final public var execution: KochavaNetworking.Execution {
+      get
+    }
+    final public func invalidate()
+    @objc final public var conversion: KochavaMeasurement.Measurement.AdAttribution.Conversion {
+      @objc get
+      @objc set(conversion)
+    }
+    @objc deinit
+  }
+}
+extension KochavaMeasurement.Event {
+  @_hasMissingDesignatedInitializers @objc(KVAEvent_DefaultParameter) final public class DefaultParameter : ObjectiveC.NSObject, KochavaNetworking.DecodableFrom, KochavaNetworking.EncodableTo, KochavaNetworking.Executable, os.Logger.Provider, KochavaNetworking.Networking.Provider, KochavaNetworking.Registerable {
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc(registerWithUserIdString:) public static func register(userIdString: Swift.String?)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc(registerWithUserIdString:registrarArray:) public static func register(userIdString: Swift.String?, registrarArray: [any KochavaMeasurement.Event.DefaultParameter.RegistrarProvider]?)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc(registerWithName:value:) public static func register(name: KochavaMeasurement.Event.DefaultParameter.Name, value: Any?)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc(registerWithName:value:registrarArray:) public static func register(name: KochavaMeasurement.Event.DefaultParameter.Name, value: Any?, registrarArray: [any KochavaMeasurement.Event.DefaultParameter.RegistrarProvider]?)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func from(_ object: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func to(context: KochavaNetworking.Context?) -> Any?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @discardableResult
+    final public func register() -> KochavaNetworking.Collection.RegisterResult?
+    #endif
+    final public func execute()
+    public static let logger: os.Logger
+    public static let type_kochava: KochavaNetworking.Kochava_Type
+    final public var execution: KochavaNetworking.Execution {
+      get
+    }
+    @objc final public let name: KochavaMeasurement.Event.DefaultParameter.Name
+    public typealias Name = Swift.String
+    public typealias Value = Any
+    @objc final public var networking: KochavaNetworking.Networking?
+    @objc(KVAEvent_DefaultParameter_Registrar) public protocol Registrar {
+      @objc(register:) func register(_ eventDefaultParameter: KochavaMeasurement.Event.DefaultParameter)
+    }
+    @objc(KVAEvent_DefaultParameter_RegistrarProvider) public protocol RegistrarProvider {
+      @objc var event_defaultParameter_registrar: any KochavaMeasurement.Event.DefaultParameter.Registrar { get }
+    }
+    @objc deinit
+  }
+}
+@_hasMissingDesignatedInitializers @objc(KVACustomValue) final public class CustomValue : ObjectiveC.NSObject, KochavaNetworking.DecodableFrom, KochavaNetworking.EncodableTo, KochavaNetworking.Executable, os.Logger.Provider, KochavaNetworking.Networking.Provider, KochavaNetworking.Registerable {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(registerWithName:value:) public static func register(name: KochavaMeasurement.CustomValue.Name, value: Any?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(registerWithName:value:registrarArray:) public static func register(name: KochavaMeasurement.CustomValue.Name, value: Any?, registrarArray: [any KochavaMeasurement.CustomValue.RegistrarProvider]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func from(_ object: Any?) -> Self?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func to(context: KochavaNetworking.Context?) -> Any?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @discardableResult
+  final public func register() -> KochavaNetworking.Collection.RegisterResult?
+  #endif
+  final public func execute()
+  public static let logger: os.Logger
+  public static let type_kochava: KochavaNetworking.Kochava_Type
+  final public var execution: KochavaNetworking.Execution {
+    get
+  }
+  @objc final public let name: KochavaMeasurement.CustomValue.Name
+  public typealias Name = Swift.String
+  @objc final public let value: Any?
+  public typealias Value = Any
+  @objc final public var networking: KochavaNetworking.Networking?
+  @objc(KVACustomValue_Registrar) public protocol Registrar {
+    @objc(register:) func register(_ customValue: KochavaMeasurement.CustomValue)
+  }
+  @objc(KVACustomValue_RegistrarProvider) public protocol RegistrarProvider {
+    @objc var customValue_registrar: any KochavaMeasurement.CustomValue.Registrar { get }
+  }
+  @objc deinit
+}
+extension KochavaMeasurement.Measurement {
+  @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(KVAMeasurement_Attribution) final public class Attribution : ObjectiveC.NSObject, KochavaNetworking.ConfigurableWith, KochavaNetworking.DecodableFrom, KochavaNetworking.DecodableFromWithInitializedObject, KochavaNetworking.EncodableTo, KochavaNetworking.Executor, KochavaNetworking.Invalidatable, KochavaNetworking.Keyable, os.Logger.Provider, KochavaNetworking.Startable {
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func from(_ object: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @discardableResult
+    public static func from(_ object: Any?, initializedObject: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func to(context: KochavaNetworking.Context?) -> Any?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func configure(with object: Any?, context: KochavaNetworking.Context?)
+    #endif
+    final public func start()
+    @objc(retrieveResultWithClosure_didComplete:) final public func retrieveResult(closure_didComplete: @escaping KochavaMeasurement.Measurement.Attribution.Closure_RetrieveResult_DidComplete)
+    public typealias Closure_RetrieveResult_DidComplete = (_ result: KochavaMeasurement.Measurement.Attribution.Result) -> Swift.Void
+    public static let logger: os.Logger
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func key(context: KochavaNetworking.Context?) -> Swift.AnyHashable?
+    #endif
+    public static let type_kochava: KochavaNetworking.Kochava_Type
+    final public var execution: KochavaNetworking.Execution {
+      get
+    }
+    final public func invalidate()
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc final public var closure_didRetrieveResult: KochavaMeasurement.Measurement.Attribution.Closure_DidRetrieveResult? {
+      @objc get
+      @objc set(closure_didRetrieveResult)
+    }
+    #endif
+    public typealias Closure_DidRetrieveResult = (_ attribution: KochavaMeasurement.Measurement.Attribution, _ attributionResult: KochavaMeasurement.Measurement.Attribution.Result) -> Swift.Void
+    @objc final public var retrieveResultBool: Swift.Bool {
+      @objc get
+      @objc set(retrieveResultBool)
+    }
+    @objc deinit
+  }
+}
+@available(iOS 16.1, *)
+extension StoreKit.SKAdNetwork.CoarseConversionValue {
+  @available(iOS 16.1, *)
+  public func identifier() -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func from(_ object: Any?) -> StoreKit.SKAdNetwork.CoarseConversionValue?
+  #endif
+}
+@_inheritsConvenienceInitializers @objc(KVAEvent) final public class Event : ObjectiveC.NSObject, KochavaNetworking.DecodableFrom, KochavaNetworking.EncodableTo, KochavaNetworking.Executable, KochavaNetworking.Transaction.ServiceLocallyBoolPropertyProvider, KochavaNetworking.Transaction.SubIdentifierProvider, os.Logger.Provider, KochavaNetworking.Networking.Provider {
+  @objc override required dynamic public init()
+  @objc(initWithType:) public init(type: KochavaMeasurement.Event_Type)
+  @objc(initWithTypeNameString:) convenience public init(typeNameString: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func from(_ object: Any?) -> Self?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func to(context: KochavaNetworking.Context?) -> Any?
+  #endif
+  final public func execute()
+  @objc final public func send()
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(sendWithSenderArray:) final public func send(senderArray senderProviderArray: [any KochavaMeasurement.Event.SenderProvider]?)
+  #endif
+  public static let logger: os.Logger
+  @objc override final public var description: Swift.String {
+    @objc get
+  }
+  public static let type_kochava: KochavaNetworking.Kochava_Type
+  final public var execution: KochavaNetworking.Execution {
+    get
+  }
+  @objc final public func eventName() -> KochavaMeasurement.Event.EventName
+  public typealias EventName = Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func valueAny(forPropertyIdentifier propertyIdentifier: KochavaMeasurement.Event.PropertyIdentifier?) -> Any?
+  #endif
+  public typealias PropertyIdentifier = Swift.String
+  final public func transaction_serviceLocallyBool() -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
+  final public func transaction_subIdentifier() -> Swift.String?
+  #endif
+  @objc final public var eventType: KochavaMeasurement.Event_Type {
+    get
+  }
+  @objc final public var networking: KochavaNetworking.Networking?
+  @objc final public var sendAsyncBool: Swift.Bool
+  @objc final public var sendLogMessagePrintBool: Swift.Bool
+  @objc final public var serviceLocallyBool: Swift.Bool {
+    @objc get
+    @objc set(serviceLocallyBool)
+  }
+  @objc final public var actionString: Swift.String?
+  @objc final public var adCampaignIdString: Swift.String?
+  @objc final public var adCampaignNameString: Swift.String?
+  @objc final public var adDeviceTypeString: Swift.String?
+  @objc final public var adGroupIdString: Swift.String?
+  @objc final public var adGroupNameString: Swift.String?
+  @objc final public var adMediationNameString: Swift.String?
+  @objc final public var adNetworkNameString: Swift.String?
+  @objc final public var adPlacementString: Swift.String?
+  @objc final public var adSizeString: Swift.String?
+  @objc final public var adTypeString: Swift.String?
+  @objc final public var appleWatchBool: Swift.Bool
+  @objc final public var appleWatchIdString: Swift.String?
+  @objc final public var appStoreReceiptBase64EncodedString: Swift.String?
+  @objc final public var backgroundBoolNumber: Foundation.NSNumber?
+  @objc final public var checkoutAsGuestString: Swift.String?
+  @objc final public var completedBoolNumber: Foundation.NSNumber?
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public var consent: KochavaNetworking.Networking.Privacy.IntelligentConsent? {
+    @objc get
+    @objc set(consent)
+  }
+  #endif
+  @objc final public var contentIdString: Swift.String?
+  @objc final public var contentTypeString: Swift.String?
+  @objc final public var currencyString: Swift.String?
+  @objc final public var customEventName: KochavaMeasurement.Event.CustomEventName?
+  public typealias CustomEventName = Swift.String
+  @objc final public var date: Foundation.Date?
+  @objc final public var dateString: Swift.String?
+  @objc final public var descriptionString: Swift.String?
+  @objc final public var destinationString: Swift.String?
+  @objc final public var durationTimeIntervalNumber: Foundation.NSNumber?
+  @objc final public var endDate: Foundation.Date?
+  @objc final public var endDateString: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public var infoDictionary: [Swift.AnyHashable : Any]? {
+    @objc get
+    @objc set(infoDictionary)
+  }
+  #endif
+  @objc final public var infoString: Swift.String?
+  @objc final public var itemAddedFromString: Swift.String?
+  @objc final public var levelString: Swift.String?
+  @objc final public var maxRatingValueDoubleNumber: Foundation.NSNumber?
+  @objc final public var nameString: Swift.String?
+  @objc final public var orderIdString: Swift.String?
+  @objc final public var originString: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public var payloadDictionary: [Swift.AnyHashable : Any]? {
+    @objc get
+    @objc set(payloadDictionary)
+  }
+  #endif
+  @objc final public var priceDecimalNumber: Foundation.NSDecimalNumber?
+  @objc final public var priceDoubleNumber: Foundation.NSNumber?
+  @objc final public var quantityDoubleNumber: Foundation.NSNumber?
+  @objc final public var ratingValueDoubleNumber: Foundation.NSNumber?
+  @objc final public var receiptIdString: Swift.String?
+  @objc final public var referralFromString: Swift.String?
+  @objc final public var registrationMethodString: Swift.String?
+  @objc final public var resultsString: Swift.String?
+  @objc final public var scoreString: Swift.String?
+  @objc final public var searchTermString: Swift.String?
+  @objc final public var sourceString: Swift.String?
+  @objc final public var spatialXDoubleNumber: Foundation.NSNumber?
+  @objc final public var spatialYDoubleNumber: Foundation.NSNumber?
+  @objc final public var spatialZDoubleNumber: Foundation.NSNumber?
+  @objc final public var startDate: Foundation.Date?
+  @objc final public var startDateString: Swift.String?
+  @objc final public var successString: Swift.String?
+  @objc final public var userIdString: Swift.String?
+  @objc final public var uriString: Swift.String?
+  @objc final public var userNameString: Swift.String?
+  @objc final public var validatedString: Swift.String?
+  @objc(KVAEvent_Sender) public protocol Sender {
+    @objc(sendEvent:) func send(event: KochavaMeasurement.Event)
+  }
+  @objc(KVAEvent_SenderProvider) public protocol SenderProvider {
+    @objc var event_sender: any KochavaMeasurement.Event.Sender { get }
+  }
+  @objc deinit
+}
+extension KochavaMeasurement.Event : JavaScriptCore.JSExport {
+}
+extension AppTrackingTransparency.ATTrackingManager.AuthorizationStatus {
+  public func authorizationStatusString() -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func from(_ object: Any?) -> AppTrackingTransparency.ATTrackingManager.AuthorizationStatus?
+  #endif
+}
+extension KochavaMeasurement.Measurement {
+  @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(KVAMeasurement_Events) final public class Events : ObjectiveC.NSObject, KochavaNetworking.ConfigurableWith, KochavaNetworking.DecodableFrom, KochavaNetworking.DecodableFromWithInitializedObject, KochavaNetworking.EncodableTo, KochavaMeasurement.Event.DefaultParameter.Registrar, KochavaMeasurement.Event.DefaultParameter.RegistrarProvider, KochavaMeasurement.Event.Sender, KochavaMeasurement.Event.SenderProvider, KochavaNetworking.Executor, KochavaNetworking.Invalidatable, KochavaNetworking.Keyable, os.Logger.Provider {
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func from(_ object: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @discardableResult
+    public static func from(_ object: Any?, initializedObject: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func to(context: KochavaNetworking.Context?) -> Any?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func configure(with object: Any?, context: KochavaNetworking.Context?)
+    #endif
+    @objc final public func send(event: KochavaMeasurement.Event)
+    @objc final public var event_sender: any KochavaMeasurement.Event.Sender {
+      @objc get
+    }
+    public static let logger: os.Logger
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func key(context: KochavaNetworking.Context?) -> Swift.AnyHashable?
+    #endif
+    public static let type_kochava: KochavaNetworking.Kochava_Type
+    final public var execution: KochavaNetworking.Execution {
+      get
+    }
+    final public func invalidate()
+    @objc(register:) final public func register(_ defaultParameter: KochavaMeasurement.Event.DefaultParameter)
+    @objc final public var event_defaultParameter_registrar: any KochavaMeasurement.Event.DefaultParameter.Registrar {
+      @objc get
+    }
+    @objc deinit
+  }
+}
+extension KochavaMeasurement.Measurement {
+  @_hasMissingDesignatedInitializers @objc(KVAMeasurement_General) final public class General : ObjectiveC.NSObject, KochavaNetworking.ConfigurableWith, KochavaNetworking.DecodableFrom, KochavaNetworking.DecodableFromWithInitializedObject, KochavaNetworking.EncodableTo, KochavaNetworking.Executor, KochavaNetworking.Invalidatable, KochavaNetworking.Keyable, os.Logger.Provider, KochavaNetworking.Startable {
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func from(_ object: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @discardableResult
+    public static func from(_ object: Any?, initializedObject: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func to(context: KochavaNetworking.Context?) -> Any?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func configure(with object: Any?, context: KochavaNetworking.Context?)
+    #endif
+    final public func start()
+    public static let logger: os.Logger
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func key(context: KochavaNetworking.Context?) -> Swift.AnyHashable?
+    #endif
+    public static let type_kochava: KochavaNetworking.Kochava_Type
+    final public var execution: KochavaNetworking.Execution {
+      get
+    }
+    final public func invalidate()
+    final public var controlDomainStringAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var controlDomain2StringAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var controlDomain3StringAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var storageIdentifierAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func trackingControlDomainString() -> Swift.String?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func trackingControlDomainStringAdapter() -> KochavaNetworking.Adapter?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func trackingControlDomain2String() -> Swift.String?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func trackingControlDomain2StringAdapter() -> KochavaNetworking.Adapter?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func trackingControlDomain3String() -> Swift.String?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func trackingControlDomain3StringAdapter() -> KochavaNetworking.Adapter?
+    #endif
+    @objc deinit
+  }
+}
+extension KochavaMeasurement.Event {
+  @objc(sendCustomWithEventName:) public static func sendCustom(eventName: KochavaMeasurement.Event.CustomEventName)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(sendCustomWithEventName:senderArray:) public static func sendCustom(eventName: KochavaMeasurement.Event.CustomEventName, senderArray: [any KochavaMeasurement.Event.SenderProvider]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(sendCustomWithEventName:infoDictionary:) public static func sendCustom(eventName: KochavaMeasurement.Event.CustomEventName, infoDictionary: [Swift.AnyHashable : Any]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(sendCustomWithEventName:infoDictionary:senderArray:) public static func sendCustom(eventName: KochavaMeasurement.Event.CustomEventName, infoDictionary: [Swift.AnyHashable : Any]?, senderArray: [any KochavaMeasurement.Event.SenderProvider]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(sendCustomWithEventName:infoString:) public static func sendCustom(eventName: KochavaMeasurement.Event.CustomEventName, infoString: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(sendCustomWithEventName:infoString:senderArray:) public static func sendCustom(eventName: KochavaMeasurement.Event.CustomEventName, infoString: Swift.String?, senderArray: [any KochavaMeasurement.Event.SenderProvider]?)
+  #endif
+  @objc(initCustomWithEventName:) convenience dynamic public init(customWithEventName eventName: KochavaMeasurement.Event.CustomEventName)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(initCustomWithEventName:infoDictionary:) convenience dynamic public init(customWithEventName eventName: KochavaMeasurement.Event.CustomEventName, infoDictionary: [Swift.AnyHashable : Any]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(initCustomWithEventName:infoString:) convenience dynamic public init(customWithEventName eventName: KochavaMeasurement.Event.CustomEventName, infoString: Swift.String?)
+  #endif
+}
+@available(iOS 17.4, *)
+extension AdAttributionKit.CoarseConversionValue {
+  @available(iOS 17.4, *)
+  public func identifier() -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func from(_ object: Any?) -> AdAttributionKit.CoarseConversionValue?
+  #endif
+}
+extension KochavaMeasurement.Measurement.AdAttribution {
+  @_inheritsConvenienceInitializers @objc(KVAMeasurement_AdAttribution_Conversion) final public class Conversion : ObjectiveC.NSObject, KochavaNetworking.ConfigurableWith, KochavaNetworking.DecodableFrom, KochavaNetworking.EncodableTo, KochavaNetworking.Executor, KochavaNetworking.Invalidatable, os.Logger.Provider, KochavaNetworking.Startable {
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func from(_ object: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func to(context: KochavaNetworking.Context?) -> Any?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func configure(with object: Any?, context: KochavaNetworking.Context?)
+    #endif
+    final public func start()
+    public static let logger: os.Logger
+    public static let type_kochava: KochavaNetworking.Kochava_Type
+    final public var execution: KochavaNetworking.Execution {
+      get
+    }
+    final public func invalidate()
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc final public var closure_didUpdatePostbackValue: KochavaMeasurement.Measurement.AdAttribution.Conversion.Closure_DidUpdatePostbackValue? {
+      @objc get
+      @objc set(closure_didUpdatePostbackValue)
+    }
+    #endif
+    public typealias Closure_DidUpdatePostbackValue = (_ conversion: KochavaMeasurement.Measurement.AdAttribution.Conversion, _ result: KochavaMeasurement.Measurement.AdAttribution.Conversion.Result, _ api: KochavaMeasurement.Measurement.AdAttribution.Conversion.Result.API) -> Swift.Void
+    @objc final public var result: KochavaMeasurement.Measurement.AdAttribution.Conversion.Result {
+      @objc get
+    }
+    @objc override dynamic public init()
+    @objc deinit
+  }
+}
+extension KochavaMeasurement.Measurement {
+  @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(KVAMeasurement_CustomValues) final public class CustomValues : ObjectiveC.NSObject, Foundation.NSCopying, KochavaNetworking.ConfigurableWith, KochavaMeasurement.CustomValue.Registrar, KochavaMeasurement.CustomValue.RegistrarProvider, KochavaNetworking.DecodableFrom, KochavaNetworking.DecodableFromWithInitializedObject, KochavaNetworking.EncodableTo, KochavaNetworking.Executor, KochavaNetworking.Invalidatable, KochavaNetworking.Keyable, os.Logger.Provider, KochavaNetworking.Networking.Provider {
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc final public func copy(with zone: ObjectiveC.NSZone? = nil) -> Any
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func from(_ object: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @discardableResult
+    public static func from(_ object: Any?, initializedObject: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func to(context: KochavaNetworking.Context?) -> Any?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func configure(with object: Any?, context: KochavaNetworking.Context?)
+    #endif
+    @objc(register:) final public func register(_ customValue: KochavaMeasurement.CustomValue)
+    @objc final public var customValue_registrar: any KochavaMeasurement.CustomValue.Registrar {
+      @objc get
+    }
+    public static let logger: os.Logger
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func key(context: KochavaNetworking.Context?) -> Swift.AnyHashable?
+    #endif
+    public static let type_kochava: KochavaNetworking.Kochava_Type
+    final public var execution: KochavaNetworking.Execution {
+      get
+    }
+    final public func invalidate()
+    @objc final public var networking: KochavaNetworking.Networking? {
+      @objc get
+      @objc set
+    }
+    @objc deinit
+  }
+}
+@_hasMissingDesignatedInitializers @objc(KVADeeplink) final public class Deeplink : ObjectiveC.NSObject, KochavaNetworking.DecodableFrom, KochavaNetworking.EncodableTo, KochavaNetworking.Executable, os.Logger.Provider, KochavaNetworking.Networking.Provider {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(processWithURL:closure_didComplete:) public static func process(url: Foundation.URL?, closure_didComplete: KochavaMeasurement.Deeplink.Closure_Process_DidComplete?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(processWithURL:timeoutTimeInterval:closure_didComplete:) public static func process(url: Foundation.URL?, timeoutTimeInterval processTimeoutTimeInterval: Foundation.TimeInterval, closure_didComplete: KochavaMeasurement.Deeplink.Closure_Process_DidComplete?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(processWithURL:processor:closure_didComplete:) public static func process(url: Foundation.URL?, processor: (any KochavaMeasurement.Deeplink.ProcessorProvider)?, closure_didComplete: KochavaMeasurement.Deeplink.Closure_Process_DidComplete?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(processWithURL:timeoutTimeInterval:processor:closure_didComplete:) public static func process(url: Foundation.URL?, timeoutTimeInterval processTimeoutTimeInterval: Foundation.TimeInterval, processor: (any KochavaMeasurement.Deeplink.ProcessorProvider)?, closure_didComplete: KochavaMeasurement.Deeplink.Closure_Process_DidComplete?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func from(_ object: Any?) -> Self?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc(kva_toContext:) final public func to(context: KochavaNetworking.Context?) -> Any?
+  #endif
+  final public func execute()
+  public static let logger: os.Logger
+  public static let type_kochava: KochavaNetworking.Kochava_Type
+  final public var execution: KochavaNetworking.Execution {
+    get
+  }
+  public typealias Closure_Process_DidComplete = (_ deeplink: KochavaMeasurement.Deeplink) -> Swift.Void
+  @objc final public var urlString: Swift.String?
+  @objc final public var networking: KochavaNetworking.Networking?
+  @objc final public var destinationString: Swift.String?
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public var pathURLString: Swift.String? {
+    @objc get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc final public var rawDictionary: [Swift.AnyHashable : Any]? {
+    @objc get
+    @objc set(rawDictionary)
+  }
+  #endif
+  @objc final public var unwrappedURLString: Swift.String?
+  @objc(KVADeeplink_Processor) public protocol Processor {
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc(processDeeplink:closure_didComplete:) func process(deeplink: KochavaMeasurement.Deeplink, closure_didComplete: KochavaMeasurement.Deeplink.Closure_Process_DidComplete?)
+    #endif
+  }
+  @objc(KVADeeplink_ProcessorProvider) public protocol ProcessorProvider {
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc var deeplink_processor: (any KochavaMeasurement.Deeplink.Processor)? { get }
+    #endif
+  }
+  @objc deinit
+}
+extension KochavaMeasurement.Measurement {
+  @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(KVAMeasurement_Datapoints) final public class Datapoints : ObjectiveC.NSObject, KochavaNetworking.ConfigurableWith, KochavaNetworking.DecodableFrom, KochavaNetworking.DecodableFromWithInitializedObject, KochavaNetworking.EncodableTo, KochavaNetworking.Executor, KochavaNetworking.Invalidatable, KochavaNetworking.Keyable, os.Logger.Provider {
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func from(_ object: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @discardableResult
+    public static func from(_ object: Any?, initializedObject: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func to(context: KochavaNetworking.Context?) -> Any?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func configure(with object: Any?, context: KochavaNetworking.Context?)
+    #endif
+    public static let logger: os.Logger
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func key(context: KochavaNetworking.Context?) -> Swift.AnyHashable?
+    #endif
+    public static let type_kochava: KochavaNetworking.Kochava_Type
+    final public var execution: KochavaNetworking.Execution {
+      get
+    }
+    final public func invalidate()
+    final public var appMainBundleDisplayNameStringAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var appMainBundleShortVersionStringAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var appMainBundleVersionStringAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var appStoreReceiptDataAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var architectureStringAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var batteryLevelPercentageIntAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var batteryStateStringAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var bootDateAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var carrierNameStringAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var cellularTypeStringAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var currentLocaleIdentifierStringAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var deviceModelStringAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var deviceOrientationStringAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var firstPreferredLanguageStringAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var hardwareMachineModelIdStringAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var iabGPPDictionaryAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var iabTCFDictionaryAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var iabUSPrivacyStringAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var idctDataAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var idfvStringAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var localTimezoneNameStringAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var mainScreenBrightnessNumberAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var mainScreenNativeBoundsHeightIntAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var mainScreenNativeBoundsWidthIntAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var networkConnectionTypeStringAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var osGenuineBoolAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var sdkGeneratedUserAgentStringAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var userAgentStringAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var volumeNumberAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var vpnBoolAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    final public var webViewUserAgentStringAdapter: KochavaNetworking.Adapter {
+      get
+    }
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func idfaString() -> Swift.String?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func idfaStringAdapter() -> KochavaNetworking.Adapter?
+    #endif
+    @objc deinit
+  }
+}
+extension KochavaMeasurement.Deeplink {
+  @_hasMissingDesignatedInitializers @objc(KVADeeplink_DeferredPrefetch) final public class DeferredPrefetch : ObjectiveC.NSObject, KochavaNetworking.DecodableFrom, KochavaNetworking.EncodableTo, KochavaNetworking.Executable, os.Logger.Provider, KochavaNetworking.Networking.Provider, KochavaNetworking.Registerable {
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc(augmentWithName:identifier:) public static func augment(name: KochavaMeasurement.Deeplink.DeferredPrefetch.Name, identifier: KochavaMeasurement.Deeplink.DeferredPrefetch.Identifier?)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @objc(augmentWithName:identifier:augmenterArray:) public static func augment(name: KochavaMeasurement.Deeplink.DeferredPrefetch.Name, identifier: KochavaMeasurement.Deeplink.DeferredPrefetch.Identifier?, augmenterArray: [any KochavaMeasurement.Deeplink_DeferredPrefetch_AugmenterProvider]?)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    public static func from(_ object: Any?) -> Self?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    final public func to(context: KochavaNetworking.Context?) -> Any?
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
+    @discardableResult
+    final public func register() -> KochavaNetworking.Collection.RegisterResult?
+    #endif
+    final public func execute()
+    public static let logger: os.Logger
+    public static let type_kochava: KochavaNetworking.Kochava_Type
+    #if compiler(>=5.3) && $NonescapableTypes
+    @discardableResult
+    final public func augment() -> KochavaNetworking.Collection.RegisterResult?
+    #endif
+    final public var execution: KochavaNetworking.Execution {
+      get
+    }
+    @objc final public let name: KochavaMeasurement.Deeplink.DeferredPrefetch.Name
+    public typealias Name = Swift.String
+    @objc final public let identifier: KochavaMeasurement.Deeplink.DeferredPrefetch.Identifier?
+    public typealias Identifier = Swift.String
+    @objc final public var networking: KochavaNetworking.Networking?
+    @objc deinit
+  }
+}
+@objc(KVADeeplink_DeferredPrefetch_Augmenter) public protocol Deeplink_DeferredPrefetch_Augmenter {
+  @objc(augment:) func augment(_ deferredPrefetch: KochavaMeasurement.Deeplink.DeferredPrefetch)
+}
+@objc(KVADeeplink_DeferredPrefetch_AugmenterProvider) public protocol Deeplink_DeferredPrefetch_AugmenterProvider {
+  @objc var deeplinks_deferredPrefetch_augmenter: any KochavaMeasurement.Deeplink_DeferredPrefetch_Augmenter { get }
+}

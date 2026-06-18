@@ -1,0 +1,11 @@
+framework module KochavaGoogleODM {
+  umbrella header "KochavaGoogleODM.h"
+  export *
+
+  module * { export * }
+}
+
+module KochavaGoogleODM.Swift {
+  header "KochavaGoogleODM-Swift.h"
+  requires objc
+}

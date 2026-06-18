@@ -1,0 +1,10 @@
+{
+  "name": "com.kochava.measurement.samsungtracking",
+  "displayName": "Kochava Measurement Samsung Tracking",
+  "version": "7.0.0",
+  "unity": "2021.3",
+  "description": "Industry Leading App Analytics and Attribution for Unity Apps. Optional module to support Samsung tracking.",
+  "dependencies": {
+    "com.kochava.measurement": "7.0.0"
+  }
+}

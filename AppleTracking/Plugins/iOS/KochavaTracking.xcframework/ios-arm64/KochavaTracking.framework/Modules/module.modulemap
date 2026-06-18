@@ -1,0 +1,11 @@
+framework module KochavaTracking {
+  umbrella header "KochavaTracking.h"
+  export *
+
+  module * { export * }
+}
+
+module KochavaTracking.Swift {
+  header "KochavaTracking-Swift.h"
+  requires objc
+}
