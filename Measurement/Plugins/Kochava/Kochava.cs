@@ -379,8 +379,8 @@ namespace Kochava
     {
         // Version data that is updated via a script. Do not change.
         private const string SdkName = "Unity";
-        private const string SdkVersion = "7.0.0"; // {{SDK_VERSION}}
-        private const string SdkBuildDate = "2026-06-18T18:10:07Z"; // {{SDK_BUILD_DATE}}
+        private const string SdkVersion = "7.0.1"; // {{SDK_VERSION}}
+        private const string SdkBuildDate = "2026-07-08T17:31:08Z"; // {{SDK_BUILD_DATE}}
 
         private static string GetLogLevelString(KochavaMeasurementLogLevel logLevel)
         {
