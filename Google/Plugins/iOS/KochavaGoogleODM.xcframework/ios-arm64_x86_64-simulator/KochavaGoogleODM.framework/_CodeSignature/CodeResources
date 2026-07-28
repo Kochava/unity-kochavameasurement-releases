@@ -14,11 +14,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		7h7DnORxTT6v5+qwfqq8iJERURE=
+		zBW36rJYLztggx7QNptorBFyk2k=
 		</data>
 		<key>Modules/KochavaGoogleODM.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		6DEAmIA96Hi2A7pR14FiV9UmbRw=
+		32fwHdBOUDdL5UbszRFXYhOguOA=
 		</data>
 		<key>Modules/KochavaGoogleODM.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/KochavaGoogleODM.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		6DEAmIA96Hi2A7pR14FiV9UmbRw=
+		32fwHdBOUDdL5UbszRFXYhOguOA=
 		</data>
 		<key>Modules/KochavaGoogleODM.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -77,7 +77,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fYn47YQoZvcslWdTPsmCRh2jaHvsLZvJP31RJy+4ToQ=
+			LvY1RAdCK+E6DX3l3PV7vPmcNA+Fq1gj+H4vuB5Qu+I=
 			</data>
 		</dict>
 		<key>Modules/KochavaGoogleODM.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -105,7 +105,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fYn47YQoZvcslWdTPsmCRh2jaHvsLZvJP31RJy+4ToQ=
+			LvY1RAdCK+E6DX3l3PV7vPmcNA+Fq1gj+H4vuB5Qu+I=
 			</data>
 		</dict>
 		<key>Modules/KochavaGoogleODM.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>

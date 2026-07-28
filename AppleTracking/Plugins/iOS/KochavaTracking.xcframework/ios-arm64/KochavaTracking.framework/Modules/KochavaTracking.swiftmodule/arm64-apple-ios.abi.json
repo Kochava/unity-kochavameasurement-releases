@@ -3972,7 +3972,7 @@
       "kind": "StringLiteral",
       "offset": 2308,
       "length": 8,
-      "value": "\"10.0.2\""
+      "value": "\"10.1.0\""
     },
     {
       "filePath": "\/Users\/johnbushnell\/Code\/Kochava\/Apple-SwiftPackage-KochavaTracking\/Sources\/KochavaTracking\/Product.swift",
