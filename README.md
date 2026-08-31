@@ -1,13 +1,13 @@
-## Unity KochavaTracker
+## Unity KochavaMeasurement
 The Kochava Unity SDK is a lightweight plugin which can be easily integrated into your Unity project.
 
-[![Download](https://img.shields.io/github/v/release/Kochava/Unity-KochavaTracker-Releases?include_prereleases&sort=semver)](https://github.com/Kochava/Unity-KochavaTracker-Releases/releases)
+[![Download](https://img.shields.io/github/v/release/Kochava/unity-kochavameasurement-releases?include_prereleases&sort=semver)](https://github.com/Kochava/unity-kochavameasurement-releases/releases)
 
-### Installation
-[SDK Integration](https://support.kochava.com/sdk-integration/unity-sdk-integration/)
+### Documentation
+[SDK Integration & Usage](https://support.kochava.com/articles/unity-sdk/)
 
 ### Support
 support@kochava.com
 
 ### License
-KochavaTracker is available under the [Kochava Terms of Service](https://www.kochava.com/terms-of-service/).
+KochavaMeasurement is available under the [Kochava Terms of Service](https://www.kochava.com/terms-of-service/).
