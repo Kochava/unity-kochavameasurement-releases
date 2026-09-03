@@ -1228,16 +1228,16 @@ extension KochavaMeasurement.Measurement {
 }
 @_hasMissingDesignatedInitializers @objc(KVADeeplink) final public class Deeplink : ObjectiveC.NSObject, KochavaNetworking.DecodableFrom, KochavaNetworking.EncodableTo, KochavaNetworking.Executable, os.Logger.Provider, KochavaNetworking.Networking.Provider {
   #if compiler(>=5.3) && $NonescapableTypes
-  @objc(processWithURL:closure_didComplete:) public static func process(url: Foundation.URL?, closure_didComplete: KochavaMeasurement.Deeplink.Closure_Process_DidComplete?)
+  @objc(processWithURL:eventAutoSendBool:closure_didComplete:) public static func process(url: Foundation.URL?, eventAutoSendBool: Swift.Bool, closure_didComplete: KochavaMeasurement.Deeplink.Closure_Process_DidComplete?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @objc(processWithURL:timeoutTimeInterval:closure_didComplete:) public static func process(url: Foundation.URL?, timeoutTimeInterval processTimeoutTimeInterval: Foundation.TimeInterval, closure_didComplete: KochavaMeasurement.Deeplink.Closure_Process_DidComplete?)
+  @objc(processWithURL:timeoutTimeInterval:eventAutoSendBool:closure_didComplete:) public static func process(url: Foundation.URL?, timeoutTimeInterval processTimeoutTimeInterval: Foundation.TimeInterval, eventAutoSendBool: Swift.Bool, closure_didComplete: KochavaMeasurement.Deeplink.Closure_Process_DidComplete?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @objc(processWithURL:processor:closure_didComplete:) public static func process(url: Foundation.URL?, processor: (any KochavaMeasurement.Deeplink.ProcessorProvider)?, closure_didComplete: KochavaMeasurement.Deeplink.Closure_Process_DidComplete?)
+  @objc(processWithURL:eventAutoSendBool:processor:closure_didComplete:) public static func process(url: Foundation.URL?, eventAutoSendBool: Swift.Bool, processor: (any KochavaMeasurement.Deeplink.ProcessorProvider)?, closure_didComplete: KochavaMeasurement.Deeplink.Closure_Process_DidComplete?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  @objc(processWithURL:timeoutTimeInterval:processor:closure_didComplete:) public static func process(url: Foundation.URL?, timeoutTimeInterval processTimeoutTimeInterval: Foundation.TimeInterval, processor: (any KochavaMeasurement.Deeplink.ProcessorProvider)?, closure_didComplete: KochavaMeasurement.Deeplink.Closure_Process_DidComplete?)
+  @objc(processWithURL:timeoutTimeInterval:eventAutoSendBool:processor:closure_didComplete:) public static func process(url: Foundation.URL?, timeoutTimeInterval processTimeoutTimeInterval: Foundation.TimeInterval, eventAutoSendBool: Swift.Bool, processor: (any KochavaMeasurement.Deeplink.ProcessorProvider)?, closure_didComplete: KochavaMeasurement.Deeplink.Closure_Process_DidComplete?)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   public static func from(_ object: Any?) -> Self?

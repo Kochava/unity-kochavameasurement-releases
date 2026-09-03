@@ -510,35 +510,43 @@ SWIFT_CLASS_NAMED("Deeplink")
 /// Create a deeplink and then process it.
 /// \param url The deep link url as provided.
 ///
+/// \param eventAutoSendBool A boolean indicating whether to send a standard deeplink event when a deeplink is resolved.
+///
 /// \param closure_didComplete A closure to be called when processing is complete.
 ///
-+ (void)processWithURL:(NSURL * _Nullable)url closure_didComplete:(void (^ _Nullable)(KVADeeplink * _Nonnull))closure_didComplete;
++ (void)processWithURL:(NSURL * _Nullable)url eventAutoSendBool:(BOOL)eventAutoSendBool closure_didComplete:(void (^ _Nullable)(KVADeeplink * _Nonnull))closure_didComplete;
 /// Create a deeplink and then process it.
 /// \param url The deep link url as provided.
 ///
 /// \param processTimeoutTimeInterval A time interval after which to timeout and return whatever result we have.
 ///
+/// \param eventAutoSendBool A boolean indicating whether to send a standard deeplink event when a deeplink is resolved.
+///
 /// \param closure_didComplete A closure to be called when processing is complete.
 ///
-+ (void)processWithURL:(NSURL * _Nullable)url timeoutTimeInterval:(NSTimeInterval)processTimeoutTimeInterval closure_didComplete:(void (^ _Nullable)(KVADeeplink * _Nonnull))closure_didComplete;
++ (void)processWithURL:(NSURL * _Nullable)url timeoutTimeInterval:(NSTimeInterval)processTimeoutTimeInterval eventAutoSendBool:(BOOL)eventAutoSendBool closure_didComplete:(void (^ _Nullable)(KVADeeplink * _Nonnull))closure_didComplete;
 /// Create a deeplink and then process it.
 /// \param url The deep link url as provided.
+///
+/// \param eventAutoSendBool A boolean indicating whether to send a standard deeplink event when a deeplink is resolved.
 ///
 /// \param processor An array of ProcessorProvider to which to add the token.
 ///
 /// \param closure_didComplete A closure to be called when processing is complete.
 ///
-+ (void)processWithURL:(NSURL * _Nullable)url processor:(id <KVADeeplink_ProcessorProvider> _Nullable)processor closure_didComplete:(void (^ _Nullable)(KVADeeplink * _Nonnull))closure_didComplete;
++ (void)processWithURL:(NSURL * _Nullable)url eventAutoSendBool:(BOOL)eventAutoSendBool processor:(id <KVADeeplink_ProcessorProvider> _Nullable)processor closure_didComplete:(void (^ _Nullable)(KVADeeplink * _Nonnull))closure_didComplete;
 /// Create a deeplink and then process it.
 /// \param url The deep link url as provided.
 ///
 /// \param processTimeoutTimeInterval A time interval after which to timeout and return whatever result we have.
 ///
+/// \param eventAutoSendBool A boolean indicating whether to send a standard deeplink event when a deeplink is resolved.
+///
 /// \param processor An array of ProcessorProvider to which to add the token.
 ///
 /// \param closure_didComplete A closure to be called when processing is complete.
 ///
-+ (void)processWithURL:(NSURL * _Nullable)url timeoutTimeInterval:(NSTimeInterval)processTimeoutTimeInterval processor:(id <KVADeeplink_ProcessorProvider> _Nullable)processor closure_didComplete:(void (^ _Nullable)(KVADeeplink * _Nonnull))closure_didComplete;
++ (void)processWithURL:(NSURL * _Nullable)url timeoutTimeInterval:(NSTimeInterval)processTimeoutTimeInterval eventAutoSendBool:(BOOL)eventAutoSendBool processor:(id <KVADeeplink_ProcessorProvider> _Nullable)processor closure_didComplete:(void (^ _Nullable)(KVADeeplink * _Nonnull))closure_didComplete;
 - (id _Nullable)kva_toContext:(KVAContext * _Nullable)context SWIFT_WARN_UNUSED_RESULT;
 /// The deeplink url as provided by the operating system.
 @property (nonatomic, copy) NSString * _Nullable urlString;
@@ -2089,35 +2097,43 @@ SWIFT_CLASS_NAMED("Deeplink")
 /// Create a deeplink and then process it.
 /// \param url The deep link url as provided.
 ///
+/// \param eventAutoSendBool A boolean indicating whether to send a standard deeplink event when a deeplink is resolved.
+///
 /// \param closure_didComplete A closure to be called when processing is complete.
 ///
-+ (void)processWithURL:(NSURL * _Nullable)url closure_didComplete:(void (^ _Nullable)(KVADeeplink * _Nonnull))closure_didComplete;
++ (void)processWithURL:(NSURL * _Nullable)url eventAutoSendBool:(BOOL)eventAutoSendBool closure_didComplete:(void (^ _Nullable)(KVADeeplink * _Nonnull))closure_didComplete;
 /// Create a deeplink and then process it.
 /// \param url The deep link url as provided.
 ///
 /// \param processTimeoutTimeInterval A time interval after which to timeout and return whatever result we have.
 ///
+/// \param eventAutoSendBool A boolean indicating whether to send a standard deeplink event when a deeplink is resolved.
+///
 /// \param closure_didComplete A closure to be called when processing is complete.
 ///
-+ (void)processWithURL:(NSURL * _Nullable)url timeoutTimeInterval:(NSTimeInterval)processTimeoutTimeInterval closure_didComplete:(void (^ _Nullable)(KVADeeplink * _Nonnull))closure_didComplete;
++ (void)processWithURL:(NSURL * _Nullable)url timeoutTimeInterval:(NSTimeInterval)processTimeoutTimeInterval eventAutoSendBool:(BOOL)eventAutoSendBool closure_didComplete:(void (^ _Nullable)(KVADeeplink * _Nonnull))closure_didComplete;
 /// Create a deeplink and then process it.
 /// \param url The deep link url as provided.
+///
+/// \param eventAutoSendBool A boolean indicating whether to send a standard deeplink event when a deeplink is resolved.
 ///
 /// \param processor An array of ProcessorProvider to which to add the token.
 ///
 /// \param closure_didComplete A closure to be called when processing is complete.
 ///
-+ (void)processWithURL:(NSURL * _Nullable)url processor:(id <KVADeeplink_ProcessorProvider> _Nullable)processor closure_didComplete:(void (^ _Nullable)(KVADeeplink * _Nonnull))closure_didComplete;
++ (void)processWithURL:(NSURL * _Nullable)url eventAutoSendBool:(BOOL)eventAutoSendBool processor:(id <KVADeeplink_ProcessorProvider> _Nullable)processor closure_didComplete:(void (^ _Nullable)(KVADeeplink * _Nonnull))closure_didComplete;
 /// Create a deeplink and then process it.
 /// \param url The deep link url as provided.
 ///
 /// \param processTimeoutTimeInterval A time interval after which to timeout and return whatever result we have.
 ///
+/// \param eventAutoSendBool A boolean indicating whether to send a standard deeplink event when a deeplink is resolved.
+///
 /// \param processor An array of ProcessorProvider to which to add the token.
 ///
 /// \param closure_didComplete A closure to be called when processing is complete.
 ///
-+ (void)processWithURL:(NSURL * _Nullable)url timeoutTimeInterval:(NSTimeInterval)processTimeoutTimeInterval processor:(id <KVADeeplink_ProcessorProvider> _Nullable)processor closure_didComplete:(void (^ _Nullable)(KVADeeplink * _Nonnull))closure_didComplete;
++ (void)processWithURL:(NSURL * _Nullable)url timeoutTimeInterval:(NSTimeInterval)processTimeoutTimeInterval eventAutoSendBool:(BOOL)eventAutoSendBool processor:(id <KVADeeplink_ProcessorProvider> _Nullable)processor closure_didComplete:(void (^ _Nullable)(KVADeeplink * _Nonnull))closure_didComplete;
 - (id _Nullable)kva_toContext:(KVAContext * _Nullable)context SWIFT_WARN_UNUSED_RESULT;
 /// The deeplink url as provided by the operating system.
 @property (nonatomic, copy) NSString * _Nullable urlString;

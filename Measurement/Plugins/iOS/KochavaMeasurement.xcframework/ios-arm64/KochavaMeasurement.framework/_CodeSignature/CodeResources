@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/KochavaMeasurement-Swift.h</key>
 		<data>
-		WOqKV0KhnL84PkCU1+jsOvlH9iQ=
+		V0jmyvqi9JCCiOS4gWXrWIlnC9Q=
 		</data>
 		<key>Headers/KochavaMeasurement.h</key>
 		<data>
@@ -14,23 +14,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		a8aLnqYKrgUJZKXOXJmo3pSuoc4=
+		eVKvv7OmW5Cn2E8RDy6ZfQlMzr8=
 		</data>
 		<key>Modules/KochavaMeasurement.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		VKwII40hsNg2x4p4xsMRALtn7x8=
+		Ez/aDK+Pkd7RIqYwxKidSPDHD0s=
 		</data>
 		<key>Modules/KochavaMeasurement.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		DkCxxaHtyeyONiQuP3nOAN+p0Cc=
+		CoOpFnTUv4T/WU9lX5GH7gIU5/g=
 		</data>
 		<key>Modules/KochavaMeasurement.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		kP4pPbgCaJU7q7Vi60TGZsmUkWI=
+		l+jmTsmjSbUSsU2C247LPwMU3Ho=
 		</data>
 		<key>Modules/KochavaMeasurement.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		DkCxxaHtyeyONiQuP3nOAN+p0Cc=
+		CoOpFnTUv4T/WU9lX5GH7gIU5/g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -47,7 +47,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			q1WfBizwSl012kw0MQ6cKY++Jmi8oSo5wtWPYss5X0g=
+			NBUs6utDc+avV4AW9VWX/+CyX/fleZZoxXop93wCQlw=
 			</data>
 		</dict>
 		<key>Headers/KochavaMeasurement.h</key>
@@ -61,28 +61,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6gDEl0NHsfEfJfq4LTa5JCB0kyBsowNSwwd8UwIuRT8=
+			hk1Cqs/ImN4/AESfhP5jt8TR+KMhcyyOVMxhmWdB9n0=
 			</data>
 		</dict>
 		<key>Modules/KochavaMeasurement.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GGKVQjsv8VbkDwVFgL1qEOAvK7FWdf9xaCPO8BxgVew=
+			twMr0SprW3TPFEnUaDvW2NK1WzDXDMlrwA1QPaQitao=
 			</data>
 		</dict>
 		<key>Modules/KochavaMeasurement.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FXj3RQXPD3sHbY5gcX/JJvbdUKZ7fvR8t+ICPn8FDEE=
+			Z07U5MkazKD7kZAVGaKDQOlPzw5XnokRM0Qt/7jg6M4=
 			</data>
 		</dict>
 		<key>Modules/KochavaMeasurement.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GGKVQjsv8VbkDwVFgL1qEOAvK7FWdf9xaCPO8BxgVew=
+			twMr0SprW3TPFEnUaDvW2NK1WzDXDMlrwA1QPaQitao=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

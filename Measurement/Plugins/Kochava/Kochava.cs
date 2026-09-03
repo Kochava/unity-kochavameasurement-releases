@@ -379,8 +379,8 @@ namespace Kochava
     {
         // Version data that is updated via a script. Do not change.
         private const string SdkName = "Unity";
-        private const string SdkVersion = "7.1.0"; // {{SDK_VERSION}}
-        private const string SdkBuildDate = "2026-07-24T16:27:05Z"; // {{SDK_BUILD_DATE}}
+        private const string SdkVersion = "8.0.0"; // {{SDK_VERSION}}
+        private const string SdkBuildDate = "2026-08-31T19:57:10Z"; // {{SDK_BUILD_DATE}}
 
         private static string GetLogLevelString(KochavaMeasurementLogLevel logLevel)
         {
@@ -856,7 +856,8 @@ namespace Kochava
         }
 
         // Process a launch deeplink using the default 10 second timeout.
-        public void ProcessDeeplink(string path, Action<KochavaMeasurementDeeplink> callback)
+        // eventAutoSend controls whether the SDK automatically fires a _Deeplink attribution event on completion.
+        public void ProcessDeeplink(string path, bool eventAutoSend, Action<KochavaMeasurementDeeplink> callback)
         {
             if (callback == null)
             {
@@ -877,11 +878,12 @@ namespace Kochava
                 }
             });
             NativeApi.ExecuteAdvancedInstructionWithCallback("wrapper_processDeeplink",
-                new JObject { ["path"] = path ?? "" }.ToString(), requestId, "NativeEaiCallbackListener");
+                new JObject { ["path"] = path ?? "", ["eventAutoSend"] = eventAutoSend }.ToString(), requestId, "NativeEaiCallbackListener");
         }
 
         // Process a launch deeplink using a custom timeout in seconds.
-        public void ProcessDeeplinkWithOverrideTimeout(string path, double timeout, Action<KochavaMeasurementDeeplink> callback)
+        // eventAutoSend controls whether the SDK automatically fires a _Deeplink attribution event on completion.
+        public void ProcessDeeplinkWithOverrideTimeout(string path, bool eventAutoSend, double timeout, Action<KochavaMeasurementDeeplink> callback)
         {
             if (callback == null)
             {
@@ -902,7 +904,7 @@ namespace Kochava
                 }
             });
             NativeApi.ExecuteAdvancedInstructionWithCallback("wrapper_processDeeplink",
-                new JObject { ["path"] = path ?? "", ["timeout"] = timeout }.ToString(), requestId, "NativeEaiCallbackListener");
+                new JObject { ["path"] = path ?? "", ["eventAutoSend"] = eventAutoSend, ["timeout"] = timeout }.ToString(), requestId, "NativeEaiCallbackListener");
         }
         
         // Registers a default parameter on every event.
